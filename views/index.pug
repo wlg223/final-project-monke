@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  main.container(role="main" style="padding:100px;")
+  .col.text-center
+    .ui.blue.button.btn-lg#catch
+      |   Catch a Pokemon!
+
+  #pokemodal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='pokemodalLabel' aria-hidden='true')
+    .modal-dialog.modal-xl(role='document')
+      .modal-content
+        .modal-header
+          h3#pokemodal-title.modal-title Sample title
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          .pokemon-container.container-fluid
+            .gridname
+              h2#pokemoncard-name.text-center Bulbasaur
+            .gridsprite
+              img#pokemoncard-sprite.fr-fic.fr-dii(src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png' width='90%')
+            .gridnumber
+              pull-left(style='letter-spacing:1px;') Pokedex #
+              span#pokemoncard-dexno.pull-right 1
+            .gridtype
+              pull-left(style='letter-spacing:1px;') Type:
+              span#pokemoncard-types.pull-right Grass, Poison
+            .gridabilities
+              pull-left(style='letter-spacing:1px;') Abilities:
+              span#pokemoncard-abilities.pull-right Overgrow
+        .modal-footer
+          button#pokemoncard-close.btn.btn-primary(type='button' data-dismiss='modal') I choose you!

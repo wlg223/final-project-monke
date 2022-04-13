@@ -1,0 +1,22 @@
+extends layout
+
+block content
+.container
+  button.btn.btn-info.btn-round(type='button' data-toggle='modal' data-target='#loginModal')
+    | Login
+#loginModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header.border-bottom-0
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        .form-title.text-center
+          h4 Login
+        .d-flex.flex-column.text-center
+          form
+            .form-group
+              input#email1.form-control(type='email' placeholder='Your email address...')
+            .form-group
+              input#password1.form-control(type='password' placeholder='Your password...')
+            button.btn.btn-info.btn-block.btn-round(type='button') Login

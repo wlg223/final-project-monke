@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  br
+  br
+  // searchbar
+  #pokedex-searchbar.p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4
+    .input-group
+      input.form-control.border-0.bg-light(id='pokedex-search' type='input' placeholder="Find a Pokemon by name or dex number! 'bulbasaur'")
+      .input-group-append
+        button#pokedex-search-submit.btn.btn-primary(type='submit') Search
+
+
+  .pokedex-container
+    .col-md-6(style="margin: auto;")
+      .card.card-block.d-block.bg-faded.mb-2.mr-md-2(style='text-align:center;')
+        h2#pokemoncard-name.text-center Bulbasaur
+        img#pokemoncard-sprite.fr-fic.fr-dii(src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png' width='98' height='120')
+        br
+        b.pull-left(style='letter-spacing:1px;') Pokedex #
+        span#pokemoncard-dexno.pull-right 1
+        hr
+        b.pull-left(style='letter-spacing:1px;') Type: &nbsp;
+        span#pokemoncard-types.pull-right Grass, Poison
+        hr
+        b.pull-left(style='letter-spacing:1px;') Abilities: &nbsp;
+        span#pokemoncard-abilities.pull-right Overgrow, Chlorophyll
+

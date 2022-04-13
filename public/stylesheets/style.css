@@ -1,0 +1,171 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #b00b69
+}
+
+a {
+  color: #00B7FF;
+}
+
+#catch {
+  background-color:#d1eaf5;
+  border-radius: 25px;
+    border: 5px solid black;
+    padding: 30px;
+    text-align: center;
+  font: 30px Helvetica;
+  color: black;
+}
+
+.pokedex-container {
+    padding: 40px;
+    margin: 0 auto;
+}
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+}
+
+.card {
+    list-style: none;
+    display: grid;
+    background-color: #d1eaf5;
+    border-radius: 25px;
+      border: 5px solid black;
+      padding: 30px;
+      text-align: center;
+
+}
+
+.name {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font: 30px Helvetica;
+    
+}
+.dex_no{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 0px;
+    color: #6e6d6d;
+    font: 15px Helvetica;
+}
+.type {
+    text-transform: capitalize;
+    text-align: left;
+    margin-top: 10px;
+    color: black;
+    font: 20px Helvetica;
+}
+.ability{
+    text-transform: capitalize;
+    text-align: left;
+    margin-top: 10px;
+    color: black;
+    font: 20px Helvetica;
+}
+
+.image {
+    
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    margin-bottom: 0px;
+    border-radius: 25px;
+      border: 5px solid black;
+      
+}
+
+.date {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font: 30px Helvetica;
+}
+
+.pf-container {
+    align-content: center;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+#pf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+}
+
+/* FORMATTING FOR CAUGHT POKEMON MODAL*/
+.gridname { grid-area: name; }
+.gridsprite { grid-area: sprite; }
+.gridnumber { grid-area: dexno; }
+.gridtype { grid-area: type; }
+.gridabilities { grid-area: abilities; }
+
+.pokemon-container {
+    display: grid;
+    grid-template-areas:
+            'name name name name name name'
+            'sprite sprite dexno dexno type type'
+            'sprite sprite abilities abilities abilities abilities';
+    grid-gap: 1px;
+    background-color: #d3e9f3;
+    padding: 1px;
+}
+
+.pokemon-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+.pokemonflex {
+  background-color: #b00b69
+}
+
+/* END CAUGHT POKEMON MODAL */
+
+/*  modal stuff
+.container {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 400px;
+    
+    .modal-content {
+      padding: 1rem;
+    }
+  }
+}
+
+.modal-header {
+  .close {
+    margin-top: -1.5rem;
+  }
+}
+
+.form-title {
+  margin: -2rem 0rem 2rem;
+}
+
+.btn-round {
+  border-radius: 3rem;
+}
+.delimiter {
+  padding: 1rem;  
+}
+
+.signup-section {
+  padding: 0.3rem 0rem;
+}*/

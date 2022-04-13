@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  br
+  .col-md-10(style='margin:auto')
+    .card.card-block.d-block.bg-faded.mb-2.mr-md-2(style='text-align:center;')
+      h2#trainercard-name.text-center #{trainer.username}'s Profile
+      br
+      b Trainer ##{trainer.trainerID}
+      //img#trainercard-sprite.fr-fic.fr-dii(src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png' width='98' height='98')
+      br
+      b.pull-left(style='letter-spacing:1px;') Pokemon Caught: #{trainer.dex_progress}
+      hr
+      b.pull-left(style='letter-spacing:1px;') Date joined: #{trainer.join_date}
+  br
+  br
+  .pf-container.flex-container
+    #pokecarousel.carousel.slide(data-ride='carousel' data-interval="3000" data-wrap="false")
+      .carousel-inner(style="width: 75%; margin:auto")
+        each poke, index in pokemon
+          if index === 0
+            .carousel-item.active
+              img.d-block.w-25.h-25(src=poke.sprite)
+              .carousel-caption.d-none.d-md-block
+                h3 #{poke.name} ##{poke.dex_no}
+                b.pull-left(style='letter-spacing:1px;') Type: &nbsp;
+                span#pokemonprofile-types.pull-right #{poke.types}
+                br
+                b.pull-left(style='letter-spacing:1px;') Abilities: &nbsp;
+                span#pokemonprofile-abilities.pull-right #{poke.abilities}
+                br
+                span#pokemonprofile-catchdate #{poke.catch_date}
+          else
+            .carousel-item
+              img.d-block.w-25.h-25(src=poke.sprite)
+              .carousel-caption.d-none.d-md-block
+                h3 #{poke.name} ##{poke.dex_no}
+                b.pull-left(style='letter-spacing:1px;') Type: &nbsp;
+                span#pokemonprofile-types.pull-right #{poke.types}
+                br
+                b.pull-left(style='letter-spacing:1px;') Abilities: &nbsp;
+                span#pokemonprofile-abilities.pull-right #{poke.abilities}
+                br
+                span#pokemonprofile-catchdate #{poke.catch_date}
+  hr
+  br
+  .d-flex.flex-md-wrap.pokemonflex(style="justify-content: center;")
+    each poke in pokemon
+      .card.card-block.d-block.bg-faded.mb-4.mr-md-4.p-2.border(style='text-align:center;')
+        h2#pokemoncard-name.text-center #{poke.name} ##{poke.dex_no}
+        img#pokemoncard-sprite.fr-fic.fr-dii(src=poke.sprite width='98' height='98')
+        br
+        b.pull-left(style='letter-spacing:1px;') Type: &nbsp;
+        span#pokemonprofile-types.pull-right #{poke.types}
+        br
+        b.pull-left(style='letter-spacing:1px;') Abilities: &nbsp;
+        span#pokemonprofile-abilities.pull-right #{poke.abilities}
+        hr
+        span#pokemonprofile-catchdate #{poke.catch_date}
+
